@@ -4,7 +4,6 @@ module.exports = function(app) {
     
     app.get("/api/friends", function (req, res) {
         res.json(friendsData);
-        console.log(friendsData)
     });
     
     app.post("/api/friends", function(req, res) {
@@ -17,6 +16,7 @@ module.exports = function(app) {
 
         user.scores.forEach((element) => {
             parsed.push(parseInt(element))
+            user.scores = parsed;
         })
 
         for (var i = 0; i < friendsData.length; i++) {
@@ -33,10 +33,6 @@ module.exports = function(app) {
 
         friendsData.push(user);
         res.json({ Name: matchName, Image: matchImage });
-        console.log(user.name + "\n" + user.photo + "\n" + user.scores)
-        console.log(friendsData);
-        console.log(matchName);
-        console.log(matchImage);
     })
     
 }

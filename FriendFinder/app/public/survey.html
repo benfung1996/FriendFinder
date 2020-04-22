@@ -38,7 +38,7 @@
                 <label for="question1">Question 1</label>
                 <h2>Your mind is always buzzing with unexplored ideas and plans.</h2>
                 <select class="form-control" id="question1">
-                    <!-- <option value></option> -->
+                    <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -51,7 +51,7 @@
                 <label for="question2">Question 2</label>
                 <h2>Generally speaking, you rely more on your experience than your imagination.</h2>
                 <select class="form-control" id="question2">
-                    <!-- <option value></option> -->
+                    <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -64,7 +64,7 @@
                 <label for="question3">Question 3</label>
                 <h2>You find it easy to stay relaxed and focused even when there is some pressure.</h2>
                 <select class="form-control" id="question3">
-                    <!-- <option value></option> -->
+                    <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -77,7 +77,7 @@
                 <label for="question4">Question 4</label>
                 <h2>You rarely do something just out of sheer curiosity.</h2>
                 <select class="form-control" id="question4">
-                    <!-- <option value></option> -->
+                    <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -90,7 +90,7 @@
                 <label for="question5">Question 5</label>
                 <h2>People can rarely upset you.</h2>
                 <select class="form-control" id="question5">
-                    <!-- <option value></option> -->
+                    <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -103,7 +103,7 @@
                 <label for="question6">Question 6</label>
                 <h2>It is often difficult for you to relate to other people’s feelings.</h2>
                 <select class="form-control" id="question6">
-                    <!-- <option value></option> -->
+                    <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -116,7 +116,7 @@
                 <label for="question7">Question 7</label>
                 <h2>In a discussion, truth should be more important than people’s sensitivities.</h2>
                 <select class="form-control" id="question7">
-                    <!-- <option value></option> -->
+                    <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -129,7 +129,7 @@
                 <label for="question8">Question 8</label>
                 <h2>You rarely get carried away by fantasies and ideas.</h2>
                 <select class="form-control" id="question8">
-                    <!-- <option value></option> -->
+                    <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -142,7 +142,7 @@
                 <label for="question9">Question 9</label>
                 <h2>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h2>
                 <select class="form-control" id="question9">
-                    <!-- <option value></option> -->
+                    <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -155,7 +155,7 @@
                 <label for="question10">Question 10</label>
                 <h2>You feel more energetic after spending time with a group of people.</h2>
                 <select class="form-control" id="question10">
-                    <!-- <option value></option> -->
+                    <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -212,8 +212,8 @@
         if (validateForm()) {
             
             var newFriend = {
-                name: $("#inputName").val(),
-                photo: $("#inputImage").val(),
+                name: $("#InputName").val(),
+                photo: $("#InputImage").val(),
                 scores: [
                     $("#question1").val(),
                     $("#question2").val(),
@@ -229,11 +229,9 @@
             };
 
             $.post("/api/friends", newFriend, function(data) {
-
-                console.log(data)
     
-                $("#match-name").text(data.name);
-                $("#match-img").attr("src", data.photo);
+                $("#match-name").text(data.Name);
+                $("#match-img").attr("src", data.Image);
                 $("#results-modal").modal("toggle");
  
             });
