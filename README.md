@@ -6,7 +6,7 @@ Description Friend Finder implements friend matching based on the user's respons
 
 Heroku Link: https://glacial-meadow-29158.herokuapp.com/
 
-## Instructions:
+## Instructions
 1) Click "Go to Survey" Button.
 2) Fill out survey. All sections are required.
 3) Submit when finish.
